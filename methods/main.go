@@ -13,6 +13,8 @@ func main() {
 	fmt.Println("Email before change:", user1.Email)
 	user1.NewEmail()
 	fmt.Println("Email after change:", user1.Email) // Therefore, Pointers used.
+	user1.PointerNewEmail()
+	fmt.Println("Email after change with pointer:", user1.Email) // Effect of Pointer 
 
 }
 
@@ -31,3 +33,13 @@ func (u User) NewEmail() {
 	u.Email = "test@gmail.com"
 	fmt.Println("Email is now:", u.Email)
 }
+
+
+func (u *User) PointerNewEmail() {
+	u.Email = "test@gmail.com"
+	fmt.Println("Email is now with pointer method:", u.Email)
+}
+
+
+
+
