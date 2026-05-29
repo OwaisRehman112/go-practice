@@ -23,4 +23,12 @@ func main() {
 		fmt.Printf("For Key %v, value is %v\n", key, value)
 	}
 
+	// Prints map[] which is {}
+	empty_map := make(map[string]int)
+	fmt.Println(empty_map)
+
+	// Prints map[] which is nil
+	var nil_map map[string]int
+	fmt.Println(nil_map)
+
 }
