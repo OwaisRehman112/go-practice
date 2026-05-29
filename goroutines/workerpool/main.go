@@ -9,7 +9,7 @@ import (
 func worker(id int, wg *sync.WaitGroup, ch chan string) {
 	defer wg.Done()
 
-	time.Sleep(1 * time.Second)
+	time.Sleep(1 * time.Second) // Simulating an API's request time 
 
 	ch <- fmt.Sprintf("Worker %d done", id)
 }
